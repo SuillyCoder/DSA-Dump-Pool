@@ -18,12 +18,13 @@ int main(){
 	bubbleSort(bubbleArray);
 	printf("Exhibit B: Selection Sort\n\n");
 	selectSort(selectArray);
+	printf("\nSorting Process Complete\n");
 	
 	return 0;
 }
 
 void bubbleSort(int bubbleArray[]){
-	int numEntry, run, temp, i, s, p;
+	int numEntry, run, temp, i, s, p, w;
 	
 	for (i = 0; i < 10; i++){
 		printf("Enter a number: "); scanf("%d", &numEntry);
@@ -44,9 +45,14 @@ void bubbleSort(int bubbleArray[]){
 			continue;
 			}
 		}
+		printf("Run Number %d: ", run+1);
+		for (w = 0; w < 10; w++){
+			printf(" %d ", bubbleArray[w]);
+		}
+		printf("\n");
 	}
 
-	printf("Bubble Sorted Array: ");
+	printf("\nBubble Sorted Array: ");
 	for (p = 0; p < 10; p++){
 		printf("  %d  ", bubbleArray[p]);
 	}
@@ -57,7 +63,7 @@ void bubbleSort(int bubbleArray[]){
 }
 
 void selectSort(int selectArray[]){
-	int numEntryTwo, step, min, index, tempTwo, e, f, d;
+	int numEntryTwo, step, min, index, tempTwo, e, f, d, z;
 	
 	for (e = 0; e < 10; e++){
 		printf("Enter a number: "); scanf("%d", &numEntryTwo);
@@ -69,7 +75,6 @@ void selectSort(int selectArray[]){
 	
 	for (step = 0; step < 9; step++){
 		min = selectArray[step];
-		printf("\nCurrent Min Value: %d", min);
 		for (f = step; f < 10; f++){
 			if (min > selectArray[f]){
 				min = selectArray[f];
@@ -79,6 +84,16 @@ void selectSort(int selectArray[]){
 				continue;
 			}
 		}
+		 tempTwo = min;
+        selectArray[index] = selectArray[step];
+        selectArray[step] = tempTwo;
+        
+        printf("Run Number %d: ", step+1);
+		for (z = 0; z < 10; z++){
+			printf(" %d ", selectArray[z]);
+		}
+		printf("\n");
+
 	}
 	
 	printf("\nSelection Sorted Array: ");
