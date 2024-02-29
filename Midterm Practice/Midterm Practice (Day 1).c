@@ -21,12 +21,12 @@ void deleteNode(struct node **head);
 
 int main(){
 	struct node *head = NULL;
-    char choice;
+    char choice, exitor;
 do{
     system("cls");
     printf("=== STUDENT DASHBOARD === \n");
     printf("\n[A]PPEND\n[B]ROWSE\n[C]HANGE\n[D]ELETE\n[E]XIT");
-    printf("\n\nYour choice: "); scanf("%c", &choice);
+    printf("\n\nYour choice: "); scanf(" %c", &choice);
     
     while(toupper(choice) != 'A' && toupper(choice) != 'B' &&  toupper(choice) != 'C' &&  toupper(choice) != 'D' &&  toupper(choice) != 'E'){
     	printf("Enter a valid input: "); scanf(" %c", &choice);
@@ -36,26 +36,26 @@ do{
         case 'A':
             system("cls");
             appendNode(&head);
-            printf("\n\nRedirecting to main menu in 3 seconds...");
-            sleep (3);
+            printf("\n\nPress any key to continue: ");
+            scanf(" %c", &exitor);
             break;
         case 'B': 
             system("cls");
             browseNodes(&head);
-            printf("\n\nRedirecting to main menu in 7 seconds...");
-            sleep (7);
+            printf("\n\nPress any key to continue: ");
+            scanf(" %c", &exitor);
             break;
         case 'C':
             system("cls");
             changeNode(&head);
-            printf("\n\nRedirecting to main menu in 3 seconds...");
-            sleep (3);
+            printf("\n\nPress any key to continue: ");
+            scanf(" %c", &exitor);
             break;
         case 'D':
             system("cls");
             deleteNode(&head);
-            printf("\n\nRedirecting to main menu in 3 seconds...");
-            sleep (3);
+            printf("\n\nPress any key to continue: ");
+            scanf(" %c", &exitor);
             break;
     }
 }while(toupper(choice) != 'E');
