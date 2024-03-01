@@ -101,7 +101,7 @@ do{
  }
 
 void insertSort (int *numArray, int size){
-    printf("\nSELECTION SORT IN PROGRESS....\n\n");
+    printf("\nINSERTION SORT IN PROGRESS....\n\n");
     int temp, i, s, p, f;
     int *insertArray = (int*)malloc(size*sizeof(int));
 
