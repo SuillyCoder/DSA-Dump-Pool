@@ -77,6 +77,7 @@ do{
 
 }while(choice != 0);
 
+	system("cls");
     printf("\n\n=======PROPGRAM TERMINATED=======\n\n");
 
     return 0;
@@ -101,7 +102,7 @@ do{
  }
 
 void insertSort (int *numArray, int size){
-    printf("\nINSERTION SORT IN PROGRESS....\n\n");
+    printf("\nINSERTION SORT IN PROGRESS....\n\n"); sleep(2);
     int temp, i, s, p, f;
     int *insertArray = (int*)malloc(size*sizeof(int));
 
@@ -126,7 +127,7 @@ void insertSort (int *numArray, int size){
 }
 
 void bubbleSort(int *numArray, int size){
-    printf("BUBBLE SORT IN PROGRESS....\n\n");
+    printf("BUBBLE SORT IN PROGRESS....\n\n"); sleep(2);
     int temp, i, r, c, p;
     int *bubbleArray = (int*)malloc(size*sizeof(int));
 
@@ -151,7 +152,7 @@ void bubbleSort(int *numArray, int size){
 }
 
 void selectSort(int *numArray, int size){
-    printf("SELECTION SORT IN PROGRESS....\n\n");
+    printf("SELECTION SORT IN PROGRESS....\n\n"); sleep(2);
     int temp, min;
     int i, b, s, p;
     int *selectArray = (int*)malloc(size*sizeof(int));
