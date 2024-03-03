@@ -28,6 +28,7 @@ struct node *popNode();
 int main(){
    int length = 1;
    char expression[100], expressionCopy[100];
+   fflush(stdin);
    printf("Enter a bunch of variables and operators: ");
    fgets(expression, sizeof(expression), stdin);
 
